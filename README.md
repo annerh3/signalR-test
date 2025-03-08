@@ -1,6 +1,6 @@
 # Test-Proyect SignalR por Anner Henriquez
 
-`ASP.NET Core SignalR` es una biblioteca de código abierto que simplifica la incorporación de funciones web en tiempo real a las aplicaciones. La funcionalidad web en tiempo real permite que el código del servidor envíe contenidos a los clientes al instante. [Leer más](https://learn.microsoft.com/es-mx/aspnet/core/signalr/introduction?view=aspnetcore-8.0#transports)
+`ASP.NET Core SignalR` es una biblioteca de código abierto que simplifica la incorporación de funciones web en tiempo real a las aplicaciones. La funcionalidad web en tiempo real permite que el código del servidor envíe contenidos a los clientes al instante. [Leer más](https://learn.microsoft.com/es-mx/aspnet/core/signalr/introduction?view=aspnetcore-8.0)
 
 ### Dependencias en el servidor (Backend-.NET8 .0)
 - Microsoft.AspNetCore.SignalR (v1.2.0)
