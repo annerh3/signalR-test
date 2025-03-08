@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "odJdEQVT6s+h4MNOhj32LeoAYE6HJherq5p7q768qX0=",
+  "Source": "RealTimeAttendance",
+  "BasePath": "_content/RealTimeAttendance",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

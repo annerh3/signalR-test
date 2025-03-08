@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "SignalR",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

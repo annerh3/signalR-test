@@ -1,0 +1,15 @@
+meta {
+  name: CheckIn
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:5233/api/check-in/2
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  ID: 1
+}

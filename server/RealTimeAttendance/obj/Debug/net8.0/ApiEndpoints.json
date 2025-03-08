@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "RealTimeAttendance.Controllers.AttendanceController",
+    "Method": "CheckIn",
+    "RelativePath": "api/check-in/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RealTimeAttendance.Controllers.AttendanceController",
+    "Method": "GetStudents",
+    "RelativePath": "api/students",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
