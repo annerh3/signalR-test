@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SSE\\server\\",
+  "WorkspaceRootPath": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SignalR\\server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11F68F88-644A-4B48-83F8-288871012BA4}|RealTimeAttendance\\RealTimeAttendance.csproj|c:\\users\\anner\\documents\\proyectos\\tests\\sse\\server\\realtimeattendance\\hubs\\attendancehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11F68F88-644A-4B48-83F8-288871012BA4}|RealTimeAttendance\\RealTimeAttendance.csproj|c:\\users\\anner\\documents\\proyectos\\tests\\signalr\\server\\realtimeattendance\\hubs\\attendancehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11F68F88-644A-4B48-83F8-288871012BA4}|RealTimeAttendance\\RealTimeAttendance.csproj|solutionrelative:realtimeattendance\\hubs\\attendancehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11F68F88-644A-4B48-83F8-288871012BA4}|RealTimeAttendance\\RealTimeAttendance.csproj|c:\\users\\anner\\documents\\proyectos\\tests\\sse\\server\\realtimeattendance\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11F68F88-644A-4B48-83F8-288871012BA4}|RealTimeAttendance\\RealTimeAttendance.csproj|c:\\users\\anner\\documents\\proyectos\\tests\\signalr\\server\\realtimeattendance\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11F68F88-644A-4B48-83F8-288871012BA4}|RealTimeAttendance\\RealTimeAttendance.csproj|solutionrelative:realtimeattendance\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11F68F88-644A-4B48-83F8-288871012BA4}|RealTimeAttendance\\RealTimeAttendance.csproj|c:\\users\\anner\\documents\\proyectos\\tests\\sse\\server\\realtimeattendance\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11F68F88-644A-4B48-83F8-288871012BA4}|RealTimeAttendance\\RealTimeAttendance.csproj|c:\\users\\anner\\documents\\proyectos\\tests\\signalr\\server\\realtimeattendance\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11F68F88-644A-4B48-83F8-288871012BA4}|RealTimeAttendance\\RealTimeAttendance.csproj|solutionrelative:realtimeattendance\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,33 +28,35 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SSE\\server\\RealTimeAttendance\\Startup.cs",
+              "DocumentMoniker": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SignalR\\server\\RealTimeAttendance\\Startup.cs",
               "RelativeDocumentMoniker": "RealTimeAttendance\\Startup.cs",
-              "ToolTip": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SSE\\server\\RealTimeAttendance\\Startup.cs",
+              "ToolTip": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SignalR\\server\\RealTimeAttendance\\Startup.cs",
               "RelativeToolTip": "RealTimeAttendance\\Startup.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAmwDsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T15:09:39.842Z"
+              "WhenOpened": "2025-03-08T15:09:39.842Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "AttendanceService.cs",
-              "DocumentMoniker": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SSE\\server\\RealTimeAttendance\\Services\\AttendanceService.cs",
+              "DocumentMoniker": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SignalR\\server\\RealTimeAttendance\\Services\\AttendanceService.cs",
               "RelativeDocumentMoniker": "RealTimeAttendance\\Services\\AttendanceService.cs",
-              "ToolTip": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SSE\\server\\RealTimeAttendance\\Services\\AttendanceService.cs",
+              "ToolTip": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SignalR\\server\\RealTimeAttendance\\Services\\AttendanceService.cs",
               "RelativeToolTip": "RealTimeAttendance\\Services\\AttendanceService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAzwDQAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAwDQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T16:14:38.74Z"
+              "WhenOpened": "2025-03-08T16:14:38.74Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AttendanceHub.cs",
-              "DocumentMoniker": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SSE\\server\\RealTimeAttendance\\Hubs\\AttendanceHub.cs",
+              "DocumentMoniker": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SignalR\\server\\RealTimeAttendance\\Hubs\\AttendanceHub.cs",
               "RelativeDocumentMoniker": "RealTimeAttendance\\Hubs\\AttendanceHub.cs",
-              "ToolTip": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SSE\\server\\RealTimeAttendance\\Hubs\\AttendanceHub.cs",
+              "ToolTip": "C:\\Users\\anner\\Documents\\Proyectos\\tests\\SignalR\\server\\RealTimeAttendance\\Hubs\\AttendanceHub.cs",
               "RelativeToolTip": "RealTimeAttendance\\Hubs\\AttendanceHub.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
