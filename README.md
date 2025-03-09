@@ -23,3 +23,14 @@ En el archivo `AttendanceService.cs` está definido una lista de Estudiantes las
 Cuando un estudiante hace 'check-in' debe de usar un endpoint, ese endpoint lo puede usar desde Bruno `brunoCollections/SignalR/CheckIn.bru`, esto haciendo uso del id del estudiante.
 
 Si hace esto, visualizando la pagina en el cliente (frontend), podrá ver como los datos se actualizan en tiempo real.
+
+
+> [!IMPORTANT]  
+>   Revisar que los puertos esten configurados correctamente tanto en el servidor (backend), como en el cliente (frontend).
+>   Esto lo puede revisar en:
+>   - **En Servidor:**
+>   `server/RealTimeAttendance/Startup.cs`
+>    - **En Cliente:**
+>   `client/react-app/src/config/hubs/signalRConnection.js` y `client/react-app/src/config/api.js`
+>   
+> Esto para evitar problemas con CORS.
