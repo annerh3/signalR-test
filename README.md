@@ -6,7 +6,6 @@
 - Microsoft.AspNetCore.SignalR (v1.2.0)
 
 ### Dependencias en el cliente (React-App)
-- Microsoft.AspNetCore.SignalR (v1.2.0)
 - @microsoft/signalr (v8.0.7)
 - Axios: (v1.8.2)
 - tailwindcss: (v4.0.12)
