@@ -12,3 +12,25 @@
 - tailwindcss: (v4.0.12)
 
 Dentro de la carpeta del cliente, hacer `npm i` para instalar dependencias.
+
+
+## ¿Como probar esta funcionalidad?
+
+En el archivo `AttendanceService.cs` está definido una lista de Estudiantes las propiedades: Id, Name y IsPresent. La propiedaad IsPresent está declarada en `false` para cada elemento de la lista.
+
+**¿Como hacer `check-in`?**
+
+Cuando un estudiante hace 'check-in' debe de usar un endpoint, ese endpoint lo puede usar desde Bruno `brunoCollections/SignalR/CheckIn.bru`, esto haciendo uso del id del estudiante.
+
+Si hace esto, visualizando la pagina en el cliente (frontend), podrá ver como los datos se actualizan en tiempo real.
+
+
+> [!IMPORTANT]  
+>   Revisar que los puertos esten configurados correctamente tanto en el servidor (backend), como en el cliente (frontend).
+>   Esto lo puede revisar en:
+>   - **En Servidor:**
+>   `server/RealTimeAttendance/Startup.cs`
+>    - **En Cliente:**
+>   `client/react-app/src/config/hubs/signalRConnection.js` y `client/react-app/src/config/api.js`
+>   
+> Esto para evitar problemas con CORS.
