@@ -1,44 +1,70 @@
 import { useState, useEffect } from "react";
 import connection from "../src/config/hubs/signalRConnection"; // conexion a SignalR
-import { getStudentsList } from "../src/actions/students.actions"; //  función  obtener la lista de estudiantes
+import { getStudentsList } from "../src/actions/students.actions"; //  función obtener la lista de estudiantes
 
 const useStudents = () => {
-    const [students, setStudents] = useState([]); // Estado para almacenar la lista de estudiantes
+    const [students, setStudents] = useState([{ // Estado para almacenar la lista de estudiantes
+        "id": 0,
+        "name": "",
+        "isPresent": false
+    }]); 
 
-    useEffect(() => {
-        // Función asíncrona para obtener la lista de estudiantes desde el servidor
-        const loadStudents = async () => {
-            const studentList = await getStudentsList();
-            setStudents(studentList); // Guardamos los estudiantes en el estado
-        };
-
-        loadStudents(); // Ejecutamos la función para obtener los estudiantes al montar el componente
-
+     // Función para iniciar la conexión con SignalR con intentos de reconexión
+    const startConnection = (retries = 2) => {
         // "conection" es la definición de la conexion que se hizo en el archivo 'signalRConnection.js'
         // Verificamos si la conexión con SignalR está en estado 'Disconnected' antes de iniciarla
         if (connection.state === "Disconnected") {
             connection
                 .start() // Iniciamos la conexión con el servidor SignalR
-                .then(() => console.log("Conectado a SignalR"))
-                .catch((err) => console.error("Error al conectar con SignalR", err));
+                .then(() => {
+                    console.log("Conectado a SignalR");
+                })
+                .catch((err) => {
+                    console.error("Error al conectar con SignalR:", err);
+                    if (retries > 0) {
+                        console.info(`Reintentando conexión... Intentos restantes: ${retries}`);
+                        setTimeout(() => startConnection(retries - 1), 3000); // Reintenta después de 3 segundos
+                    } else {
+                        console.warn("No se pudo conectar a SignalR después de varios intentos.");
+                    }
+                });
         }
+    };
 
-        // Función que maneja la actualización de la asistencia en tiempo real.
-        // Aqui se recibe al estudiante (en especifico) que ha cambiado su estado (se ha actualizado).
-        // se actualiza el estado local de la lista de estudiantes en el cliente.
-        // La función recorre la lista de estudiantes y actualiza solo el estudiante cuyo 'id' 
-        // coincide con el estudiante que fue marcado como presente, sin modificar el resto de la lista.
-        const handleAttendanceUpdate = (updatedStudent) => {
+    // Función asíncrona para obtener la lista de estudiantes desde el servidor
+    const loadStudents = async () => {
+        const studentList = await getStudentsList();
+        if (Array.isArray(studentList) && studentList.length > 0) {
+            setStudents(studentList); // Guardamos los estudiantes en el estado
+        } 
+    };
 
-            setStudents((prevStudents) =>
-                prevStudents.map((student) =>
-                    student.id === updatedStudent.id ? { ...student, isPresent: true } : student
-                )
-            );
-        };
+    /* Función se encarga de manejar las actualizaciones en tiempo real del estado de asistencia de un estudiante específico. 
+            ? Lógica interna:
+                - Recorre la lista actual de estudiantes (prevStudents).
+                - Compara el id de cada estudiante con el id del updatedStudent.
+                - Si encuentra coincidencia, actualiza su propiedad isPresent a true.
+                - El resto de los estudiantes permanece sin cambios.*/
+    const handleAttendanceUpdate = (updatedStudent) => {
+        setStudents((prevStudents) => {
+            const index = prevStudents.findIndex(s => s.id === updatedStudent.id);
+            if (index === -1) return prevStudents;
+
+            const updatedList = [...prevStudents];
+            updatedList[index] = {
+                ...updatedList[index],
+                isPresent: true
+            };
+            return updatedList;
+        });
+    };
 
 
-        //# "ReceiveAttendanceUpdate""es el metodo que se definio en "AttendanceHub.cs" (backend)
+    useEffect(() => {       
+        loadStudents(); // Ejecutamos la función para obtener los estudiantes al montar el componente
+        startConnection(); // Iniciar la conexión con SignalR
+
+        // ? "ReceiveAttendanceUpdate""es el metodo que se definió en "AttendanceHub.cs" (backend)
         // Escuchamos el evento "ReceiveAttendanceUpdate" desde el servidor
         connection.on("ReceiveAttendanceUpdate", handleAttendanceUpdate);
 
@@ -50,5 +76,4 @@ const useStudents = () => {
 
     return { students }; // Retornamos el estado con la lista de estudiantes para ser utilizado en otros componentes
 };
-
 export default useStudents; 
